@@ -54,13 +54,13 @@ btn2.addEventListener("click", function () {
   // console.log(sum);
   if (username.value == "" || !/^[\u0391-\uFFE5]+$/.test(username.value)) {
     toastTip("用户名必须为中文!!!");
-    username.focus();
+    //username.focus();
   } else if (userphone.value == "" || !/^1[3-9][0-9]{9}$/.test(userphone.value)) {
     toastTip("请输入正确的手机号!!!");
-    userphone.focus();
+   //userphone.focus();
   } else if (usercode.value == "") {
     toastTip("您的验证码错误!!!");
-    usercode.focus();
+    //usercode.focus();
   } else {
     // toastTip("登录成功");
     //本页面跳转
