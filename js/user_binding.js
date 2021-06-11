@@ -18,16 +18,15 @@ userphone.oninput = function () {
 }
 
 //生成6为随机数验证码
-let sum = "";
+//let sum = "";
 //btn1验证码倒计时
 let i = 60;
 btn1.addEventListener("click", function () {
-  for (let i = 1; i <= 6; i++) {
-    let num = Math.floor(Math.random() * 10);
-    sum += num;
-    // console.log(this.sum);
-  }
-  console.log(sum);
+//   for (let i = 1; i <= 6; i++) {
+//     let num = Math.floor(Math.random() * 10);
+//     sum += num;
+//   }
+//   console.log(sum);
   i = 60;
   btn1.disabled = true;
   // btn1.style.borderColor = "#ddd";
@@ -59,7 +58,7 @@ btn2.addEventListener("click", function () {
   } else if (userphone.value == "" || !/^1[3-9][0-9]{9}$/.test(userphone.value)) {
     toastTip("请输入正确的手机号!!!");
     userphone.focus();
-  } else if (usercode.value != sum || usercode.value == "") {
+  } else if (usercode.value == "") {
     toastTip("您的验证码错误!!!");
     usercode.focus();
   } else {
