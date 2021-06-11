@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>首页-无忧借伞</title>
+  <link rel="stylesheet" type="text/css" href="../style/indexAll.css"/>
+  <script type="text/javascript" src="../js/jQuery.js"></script>
+</head>
+<body id="bd_index">
+<div id="wrapper">
+  <header id="header">
+    <a href="###" class="btn menu">
+      <i></i>
+      <em>菜单</em>
+    </a>
+    <h1>无忧借伞</h1>
+    <a href="###" class="btn info">
+      <i></i>
+      <em>帮助</em>
+    </a>
+  </header>
+  <main id="main">
+    <div id="map"></div>
+    <div class="action">
+      <button type="button" class="btn getLocation">
+        <i></i>
+        <em>获取位置</em>
+      </button>
+      <button type="button" class="btn scan">
+        <i></i>
+        <em>扫码借伞</em>
+      </button>
+    </div>
+  </main>
+  <nav id="nav">
+    <div class=" user_info">
+      <img src="../img/her.jpg" alt="杨杨">
+      <h3>杨杨</h3>
+    </div>
+    <ul class="list">
+      <li>
+        <i class="ico one"></i>
+        <a href="user_list.html">个人资料</a>
+      </li>
+      <li>
+        <i class="ico two"></i>
+        <a href="user_log.html">借伞记录</a>
+      </li>
+      <li>
+        <i class="ico three"></i>
+        <a href="user_binding.html">退出登录</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=wjV4asfGgkaPUu7P8XQIoPM9Rdhw4H4h">
+</script>
+<script type="text/javascript" src="../js/map.js"></script>
+<script type="text/javascript">
+  let btn = document.querySelector(".menu");
+  let bd = document.body;
+  let nav = document.querySelector("#nav");
+  let header = document.querySelector("#header");
+
+  btn.addEventListener("click", function () {
+    bd.classList.toggle("open");
+  });
+
+  $(document).click(function (e) {
+    // console.log(e.target);
+    let con = $('#nav,.menu');   // 设置目标区域
+    if (!con.is(e.target) && con.has(e.target).length === 0) {
+      $("body").removeClass("open");
+    }
+  });
+
+  // document.addEventListener("click", function (e) {
+  //   let target = e.target.parentNode;
+  //   if (!(btn == target && btn.contains(target)) && !(nav == target && nav.contains(target))) {
+  //    bd.classList.remove("open");
+  //   }
+  // });
+</script>
+</body>
+</html>

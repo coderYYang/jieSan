@@ -1,0 +1,295 @@
+/*all*/
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+ul,
+li,
+dl,
+dt,
+dd,
+a,
+p,
+img,
+em,
+i,
+div,
+form,
+label,
+input,
+textarea,
+submit {
+	padding: 0;
+	margin: 0;
+	border: none;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+ul {
+	list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+	color: #000;
+}
+
+body {
+	font-size: 12px;
+	line-height: 1;
+	max-width: 540px;
+	min-width: 320px;
+	margin: 0 auto;
+	overflow-x: hidden;
+	font-family: 'microsoft yahei', Verdana, Arial, Helvetica, sans-serif;
+	transition: .6s;
+	left: 0;
+}
+
+/*all*/
+
+
+/*wrapper*/
+
+#wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+/*wrapper*/
+
+/*header*/
+
+#header {
+	background: #00bfff;
+	color: #fff;
+	display: flex;
+}
+
+#header h1 {
+	line-height: 48px;
+	flex: 1;
+	font-size: 14px;
+}
+
+.btn>em {
+	font-style: normal;
+}
+
+.btn>i {
+	display: block;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+
+#bd_index h1 {
+	text-align: center;
+}
+
+#header .btn {
+	width: 48px;
+	height: 48px;
+}
+
+.btn {
+	display: flex;
+	justify-content: center;
+	/*项目位于容器的中心。*/
+	align-items: center;
+	/*元素位于容器的中心。*/
+}
+
+
+#header .btn>em {
+	display: none;
+}
+
+#header .btn>i {
+	width: 48px;
+	height: 48px;
+	background: url(../img/menu1.png) 0 0 no-repeat;
+	background-size: 48px;
+}
+
+#header .btn.info>i {
+	background-position-y: -96px;
+}
+
+/*header*/
+
+/*main*/
+
+#main {
+	flex: 1;
+}
+
+#map {
+	height: 100%;
+}
+
+#main .action {
+	position: fixed;
+	width: 100%;
+	bottom: 40px;
+	z-index: 9;
+	margin: 0 auto;
+}
+
+.btn.scan {
+	width: 180px;
+	height: 48px;
+	background: #00BFFF;
+	margin: 0 auto;
+	border-radius: 24px;
+	border: none;
+	box-shadow: 0 5px 5px rgba(0, 0, 0, .10);
+}
+
+.btn.scan>em {
+	font-size: 18px;
+	font-weight: 700;
+	color: #fff;
+}
+
+.btn.scan>i {
+	width: 24px;
+	height: 24px;
+	background: url(../img/QRcode.png) 0 0 no-repeat;
+	background-size: 24px;
+	margin-right: 4px;
+}
+
+.btn.getLocation {
+	position: absolute;
+	right: 16px;
+	width: 48px;
+	height: 48px;
+	border-radius: 24px;
+	border: none;
+	background: transparent;
+}
+
+.btn.getLocation i {
+	width: 48px;
+	height: 48px;
+	background: url(../img/location.png) 0 0 no-repeat;
+	background-position: center;
+	background-size: 36px;
+}
+
+.btn.getLocation>em {
+	display: none;
+}
+
+/*main*/
+
+/*nav*/
+
+#nav {
+	position: absolute;
+	left: -240px;
+	top: 0;
+	width: 240px;
+	height: 100%;
+	background: #fff;
+	text-align: center;
+}
+
+#nav .user_info {
+	height: 100px;
+	margin: 40px auto;
+}
+
+#nav .user_info img {
+	width: 70px;
+	height: 70px;
+	margin-bottom: 20px;
+	border-radius: 35px;
+}
+
+#nav .user_info h3 {
+	font-size: 18px;
+	font-weight: 400;
+	color: #666666;
+}
+
+#nav .list li {
+	width: 200px;
+	height: 60px;
+	margin: 0 auto;
+	border-bottom: 2px solid #DDDDDD;
+	display: flex;
+	position: relative;
+}
+
+#nav .list li::after {
+	content: "";
+	width: 10px;
+	height: 10px;
+	border-top: 2px solid #DDDDDD;
+	border-right: 2px solid #DDDDDD;
+	transform: rotate(45deg);
+	position: absolute;
+	right: 5px;
+	top: 25px;
+}
+
+#nav .list li a {
+	display: block;
+	width: 100%;
+	font-size: 14px;
+	text-align: left;
+	line-height: 60px;
+	text-decoration: none;
+	color: #000;
+}
+
+#nav .list li i {
+	display: block;
+	width: 40px;
+	height: 40px;
+	padding-right: 20px;
+	background: url(../img/message.png) 0 0 no-repeat;
+	background-position: center;
+	background-size: 40px;
+	margin-top: 8px;
+}
+
+#nav .list li .ico.one {
+	background-position-y: 0;
+}
+
+#nav .list li .ico.two {
+	background-position-y: -40px;
+}
+
+#nav .list li .ico.three {
+	background-position-y: -80px;
+}
+
+#bd_index {
+	position: relative;
+}
+body.open {
+	left: 240px;
+}
+
+/*nav*/

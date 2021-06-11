@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>绑定账号</title>
+  <link rel="stylesheet" href="../style/userAll.css">
+</head>
+<body>
+<div id="wrapper">
+  <header id="header">
+    <a href="javascript:;" class="btn back">
+      <i></i>
+      <em>返回</em>
+    </a>
+    <h1>绑定账号</h1>
+  </header>
+  <main id="main">
+    <form action="">
+      <div class="frm_boxs">
+        <div class="frm_box">
+          <div class="frm_box_hd">
+            <label>姓名</label>
+          </div>
+          <div class="frm_box_bd">
+            <input type="text" name="realname" class="com_input" placeholder="点击此输入姓名" id="username" autocomplete="off">
+          </div>
+        </div>
+        <div class="frm_box">
+          <div class="frm_box_hd">
+            <label>手机号码</label>
+          </div>
+          <div class="frm_box_bd">
+            <input type="text" name="phone" class="com_input" placeholder="点击此输入手机号" id="userphone" autocomplete="off">
+          </div>
+          <button type="button" class="btn sms" id="btn1">
+            <em id="em1">获取验证码</em>
+          </button>
+        </div>
+        <div class="frm_box">
+          <div class="frm_box_hd">
+            <label>验证码</label>
+          </div>
+          <div class="frm_box_bd">
+            <input type="text" name="sms" class="com_input" placeholder="点击此输入验证码" id="usercode" autocomplete="off">
+          </div>
+        </div>
+        <div class="frm_box action">
+          <button type="button" class="btn submit" id="btn2">
+            <em>确认绑定</em>
+          </button>
+        </div>
+      </div>
+    </form>
+  </main>
+  <div id="toast"></div>
+</div>
+</body>
+<script src="../js/user_binding.js"></script>
+</html>

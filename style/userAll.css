@@ -1,0 +1,451 @@
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+ul,
+li,
+dl,
+dt,
+dd,
+a,
+p,
+img,
+em,
+i,
+div,
+form,
+label,
+input,
+textarea,
+submit {
+  padding: 0;
+  margin: 0;
+  border: none;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  box-sizing: border-box;
+  font-style: normal;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: #000;
+}
+
+body {
+  font-size: 12px;
+  line-height: 1;
+  max-width: 540px;
+  min-width: 320px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  font-family: 'microsoft yahei', Verdana, Arial, Helvetica, sans-serif;
+  transition: .6s;
+  left: 0;
+}
+
+/*wrapper*/
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #eee;
+  position: relative;
+}
+
+/*wrapper*/
+
+/*header*/
+
+#header {
+  background: #00bfff;
+  color: #fff;
+  display: flex;
+}
+
+#header h1 {
+  line-height: 48px;
+  flex: 1;
+  font-size: 14px;
+}
+
+.btn > em {
+  font-style: normal;
+}
+
+.btn > i {
+  display: block;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+#header .btn {
+  width: 48px;
+  height: 48px;
+}
+
+#header .btn > em {
+  display: none;
+}
+
+#header .btn > i {
+  width: 48px;
+  height: 48px;
+  background: url(../img/menu1.png) 0 0 no-repeat;
+  background-size: 48px;
+}
+
+#header .btn.back > i {
+  background-position-y: -48px;
+}
+
+/*header*/
+
+/*user_list img*/
+
+#main .user_info {
+  height: 100px;
+  margin: 40px 0;
+  text-align: center;
+}
+
+#main .user_info img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 20px;
+  border-radius: 35px;
+}
+
+#main .user_info h3 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #666666;
+}
+
+/*user_list img*/
+
+/*user_log li*/
+
+.list.link {
+  padding: 0;
+}
+
+.list.link > li {
+  padding: 0 16px;
+}
+
+.list.link > li > a {
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding: 16px 24px 16px 0;
+}
+
+.list.link li > a::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #DDDDDD;
+  border-right: 2px solid #DDDDDD;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 5px;
+  top: 17px;
+}
+
+.list > li {
+  display: flex;
+  padding: 16px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.list > li:last-child {
+  border: none;
+}
+
+.list > li em {
+  flex: 1;
+}
+
+.st0 {
+  color: #f40000;
+}
+
+.st1 {
+  color: #00BFFF;
+}
+
+.st2 {
+  color: #008C69;
+}
+
+/*user_log li*/
+
+/*user_stay header_box*/
+
+.header_box {
+  background: #00BFFF;
+  color: #fff;
+  height: 60px;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.header_box h1 {
+  font-size: 20px;
+}
+
+.header_box p {
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+/*user_stay header_box*/
+
+/*user_stay com_box*/
+
+.com_box {
+  margin-bottom: 8px;
+}
+
+.com_box header {
+  display: flex;
+  line-height: 48px;
+  padding-left: 16px;
+  background: #fff;
+}
+
+.com_box header h3 {
+  font-weight: 400;
+  flex: 1;
+}
+
+/*user_stay com_box*/
+
+/*user_stay action_box*/
+
+.btn.com {
+  line-height: 42px;
+  background: #00BFFF;
+  color: #fff;
+  width: 100%;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+  border: none;
+}
+
+.action_boxs {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 16px;
+  background: #fff;
+  border-top: 1px solid #eee;
+}
+
+
+/*user_stay action_box*/
+
+/*user_then com_table*/
+
+.com_table {
+  width: 100%;
+  background: #fff;
+  /* margin-bottom: 90px; */
+}
+
+.com_table th {
+  background: #F9F9F9;
+  color: #999;
+  font-weight: 400;
+  text-align: left;
+}
+
+.com_table th,
+.com_table td {
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.com_table .money {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+#wrapper .action_box {
+  padding: 16px;
+  background: #fff;
+  border-top: 1px solid #eee;
+}
+
+/*user_then com_table*/
+
+/*list*/
+.list {
+  background: #fff;
+  padding: 0 16px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.list > li {
+  display: flex;
+  padding: 16px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.list > li:last-child {
+  border: none;
+}
+
+.list > li > label {
+  width: 80px;
+  color: #999;
+}
+
+.list > li > em {
+  flex: 1;
+}
+
+.money {
+  color: red;
+}
+
+/*list*/
+
+/*binding*/
+
+.frm_boxs {
+  background: #fff;
+}
+
+.frm_box {
+  display: flex;
+  border-bottom: 1px solid #eee;
+  padding: 0 16px;
+  align-items: center;
+}
+
+.frm_box_hd {
+  display: flex;
+}
+
+.frm_box_hd > label {
+  width: 80px;
+  height: 48px;
+  line-height: 48px;
+  color: #999;
+}
+
+.frm_box_bd {
+  flex: 1;
+}
+
+.com_input {
+  display: block;
+  width: 100%;
+  height: 48px;
+  line-height: 48px;
+  outline: none;
+}
+
+.frm_box .btn {
+  width: 100%;
+  height: 42px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 3px;
+}
+
+.frm_box .btn > em {
+  font-size: 14px;
+}
+
+.frm_box .btn.submit {
+  background: #00BFFF;
+  color: #fff;
+  border: none;
+}
+
+.frm_box .btn.sms {
+  width: 90px;
+  height: 24px;
+  line-height: 24px;
+  border-color: #00BFFF;
+  color: #00bfff;
+}
+
+.frm_box .btn.sms > em {
+  font-size: 12px;
+  color: #00bfff;
+  /* display: block; */
+}
+
+.frm_box .btn.sms[disabled] {
+  border-color: #ddd;
+  background: #F9F9F9;
+}
+
+.frm_box .btn.sms[disabled] > em {
+  color: #ddd;
+}
+
+.frm_box.action {
+  background: #F9F9F9;
+  border: 1px solid #DDDDDD;
+  padding: 16px;
+}
+
+.frm_box_bd input::-webkit-input-placeholder {
+  /*更改input里面字体的提示颜色*/
+  transition: .2s;
+  color: #DCDCDC;
+}
+
+.frm_box_bd input:focus::-webkit-input-placeholder {
+  /* focus聚焦 */
+  color: rgba(0, 0, 0, .4);
+}
+
+
+#toast {
+  visibility: hidden;
+  /* 隐藏元素 */
+  background: rgba(0, 0, 0, 1);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: .6s;
+}
+
+#toast.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*binding*/

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="../style/userAll.css">
+		<title>已还伞</title>
+	</head>
+	<body>
+		<div id="wrapper">
+			<header id="header">
+				<a href="user_log.html" class="btn back">
+					<i></i>
+					<em>返回</em>
+				</a>
+				<h1>记录详情</h1>
+			</header>
+			<main id="main">
+				<header class="header_box">
+					<h1>已还伞</h1>
+					<p id="showTime"></p>
+				</header>
+				<div class="com_box">
+					<header>
+						<h3>订单号：1231231231</h3>
+					</header>
+					<div class="main">
+						<ul class="list">
+							<li>
+								<label>借伞地点</label>
+								<em>新湖柴桑春天营业厅</em>
+							</li>
+							<li>
+								<label>借伞日期</label>
+								<em>2018.3.16 12:12</em>
+							</li>
+							<li>
+								<label>支付押金</label>
+								<em class="money">19元</em>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="com_box">
+					<header>
+						<h3>还伞信息</h3>
+					</header>
+					<div class="main">
+
+						<ul class="list">
+							<li>
+								<label>还伞地点</label>
+								<em>新湖柴桑春天营业厅</em>
+							</li>
+							<li>
+								<label>还伞日期</label>
+								<em>2018.3.19 12:12</em>
+							</li>
+							<li>
+								<label>退还押金</label>
+								<em class="money">15.2元</em>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="com_box">
+					<header>
+						<h3>押金扣除记录</h3>
+						<span>
+							剩余
+							<em class="money">15.2元</em>
+						</span>
+					</header>
+					<div class="main">
+						<table class="com_table">
+							<tr>
+								<th>扣除时间</th>
+								<th>扣除金额</th>
+								<th>押金剩余</th>
+							</tr>
+							<tr>
+								<td>2018.03.19 12:12</td>
+								<td>-1.9元</td>
+								<td>15.2元</td>
+							</tr>
+							<tr>
+								<td>2018.03.19 12:12</td>
+								<td>-1.9元</td>
+								<td>17.1元</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</main>
+			<div class="action_box">
+				<button type="button" class="btn com">扫一扫还伞</button>
+			</div>
+		</div>
+		<script type="text/javascript">
+			//借伞时间计时
+			function nowTimeStr() {
+				let nowTime = new Date("2021/5/27 8:57:30"),
+					endTime = new Date("2021/5/15 10:26:56");
+
+				let leftTime = nowTime.getTime() - endTime.getTime(),
+					day = Math.floor(leftTime / (1000 * 60 * 60 * 24)),
+					hour = Math.floor(leftTime / (1000 * 60 * 60) % 24),
+					minute = Math.floor(leftTime / (1000 * 60) % 60),
+					second = Math.floor(leftTime / 1000 % 60);
+				let time = "共使用 " + day + "天" + hour + "时" + minute + "分" + second + "秒";
+
+				document.getElementById("showTime").innerHTML = time;
+				setInterval('nowTimeStr()', 1000);
+			}
+
+			nowTimeStr();
+		</script>
+	</body>
+</html>

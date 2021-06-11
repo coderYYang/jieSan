@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<link rel="stylesheet" href="../style/userAll.css">
+		<title>待还伞</title>
+	</head>
+	<body>
+		<div id="wrapper">
+			<header id="header">
+				<a href="user_log.html" class="btn back">
+					<i></i>
+					<em>返回</em>
+				</a>
+				<h1>记录详情</h1>
+			</header>
+			<main id="main">
+				<header class="header_box">
+					<h1>待领伞</h1>
+					<p id="TopCurrentTime"></p>
+				</header>
+				<div class="com_box">
+					<header>
+						<h3>订单号：1231231231</h3>
+					</header>
+					<div class="main">
+						<ul class="list">
+							<li>
+								<label>借伞地点</label>
+								<em>新湖柴桑春天营业厅</em>
+							</li>
+							<li>
+								<label>借伞日期</label>
+								<em>2018.3.16 12:12</em>
+							</li>
+							<li>
+								<label>支付押金</label>
+								<em class="money">19元</em>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</main>
+			<div class="action_boxs">
+				<button type="button" class="btn com">扫一扫还伞</button>
+			</div>
+		</div>
+		<script type="text/javascript">
+
+			//借伞时间计时
+			function nowTimeStr() {
+				let nowTime = new Date(),
+					endTime = new Date("2021/5/15 10:26:56");
+
+				let leftTime = nowTime.getTime() - endTime.getTime(),
+					day = Math.floor(leftTime / (1000 * 60 * 60 * 24)),
+					hour = Math.floor(leftTime / (1000 * 60 * 60) % 24),
+					minute = Math.floor(leftTime / (1000 * 60) % 60),
+					second = Math.floor(leftTime / 1000 % 60);
+				let time = "已使用 " + day + "天" + hour + "时" + minute + "分" + second + "秒";
+
+				document.getElementById("TopCurrentTime").innerHTML = time;
+			}
+			nowTimeStr();
+			setInterval('nowTimeStr()', 1000);
+		</script>
+	</body>
+</html>

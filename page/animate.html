@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title></title>
+	</head>
+	<body>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+				border: none;
+				box-sizing: border-box;
+			}
+			html,body {
+				height: 100%;
+			}
+			body {
+				max-width: 360px;
+				height: 100%;
+				margin: 0 auto;
+				position: relative;
+				left: 0;
+				transition: .6s;
+				overflow-x: hidden;
+			}
+			main {
+				background-color: #999;
+				height: 100%;
+			}
+			button {
+				padding: 10px;
+			}
+			nav {
+				width: 240px;
+				position: absolute;
+				top: 0;left: -240px;
+				background-color: #eee;
+				height: 100%;
+			}
+			body.open {
+				left: 240px;
+			}
+		</style>
+		<main>
+			<button type="button">导航菜单</button>
+		</main>
+		<nav>
+			<ul>
+				<li>导航1</li>
+				<li>导航2</li>
+				<li>导航3</li>
+			</ul>
+		</nav>
+		<script type="text/javascript">
+
+			let btn = document.querySelector("button");
+			let bd = document.body;
+			btn.addEventListener("click",function(){
+				// var bd_open = document.querySelector("body.open");
+				// if(bd_open){
+				// 	bd.classList.remove("open");
+				// }else {
+				// 	bd.classList.add("open");
+				// }
+				bd.classList.toggle("open");
+			});
+
+			let nav = document.querySelector("nav");
+			
+			document.addEventListener("click",function(e){
+				if(!(btn == e.target && btn.contains(e.target)) && !(nav == e.target && nav.contains(e.target))){
+					bd.classList.remove("open");
+				}
+				// console.log(e.target);
+			})
+		</script>
+	</body>
+</html>
